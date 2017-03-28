@@ -11,7 +11,7 @@ if($_POST['topic'] != ""){
     mysql_query($sql);
 }else if($_POST['id'] != ""){ 
     $id = addslashes($_POST['id']); $i=0;
-    $sql = "SELECT * FROM todo ORDER BY status, id desc";
+    $sql = "SELECT * FROM todo ORDER BY status, id desc"; 
     $result = mysql_query($sql,$link);
     while($obj = mysql_fetch_object($result)){ 
         if($obj->id == $id){ 
